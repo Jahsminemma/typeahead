@@ -18,6 +18,9 @@ let searchCountry = async searchText => {
 }
  const outputHtml = matches =>{
      if(matches.length > 0){
+
+//use template literal with map.
+
          output = matches.map(match =>
             `<div class="card card-body"><p><i class ="fas text-danger fa-university"></i> ${match.country}</p></div>`
             ).join('')
@@ -25,4 +28,3 @@ let searchCountry = async searchText => {
      }
  }
 search.addEventListener('input', () => searchCountry(search.value))
-//use template literal with map.
